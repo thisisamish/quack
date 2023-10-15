@@ -11,11 +11,11 @@ datasource db {
     relationMode = "prisma"
 }
 
-model Example {
-    id        Int      @id @default(autoincrement())
-    name      String
+model Post {
+    id        String   @id @default(cuid())
     createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+    content   String   @db.VarChar(255)
+    authorId  String
 
-    @@index([name])
+    @@index([authorId])
 }
