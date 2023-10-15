@@ -18,14 +18,12 @@ export const postsRouter = createTRPCRouter({
     const posts = await ctx.db.post.findMany({
       take: 100,
     });
-
     const users = (
       await clerkClient.users.getUserList({
         userId: posts.map((post) => post.authorId),
         limit: 100,
       })
     ).map(filterUserForClient);
-
     return posts.map((post) => {
       const author = users.find((user) => user.id === post.authorId);
       if (!author?.username)
