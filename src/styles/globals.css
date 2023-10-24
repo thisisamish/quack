@@ -4,4 +4,10 @@
 
 body {
   @apply bg-neutral-900 text-slate-100;
+
+  overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
