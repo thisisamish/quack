@@ -36,7 +36,7 @@ export default function ProfilePage({ username }: { username: string }) {
   return (
     <>
       <Head>
-        <title>{data.username}</title>
+        <title>{`@${data.username}`} / Quack</title>
       </Head>
       <PageLayout>
         <div className="relative h-36 bg-slate-600">
