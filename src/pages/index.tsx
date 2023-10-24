@@ -73,40 +73,6 @@ const CreatePostWizard = () => {
   );
 };
 
-type PostWithUser = RouterOutputs["posts"]["getAll"][number];
-
-const PostView = (props: PostWithUser) => {
-  const { post, author } = props;
-
-  return (
-    <Link href={`/post/${post.id}`}>
-      <div key={post.id} className="flex gap-4 border-b border-slate-400 p-4">
-        <Link href={`/@${author.username}`}>
-          <Image
-            width={100}
-            height={100}
-            alt={`@${author.username}'s profile picture`}
-            src={author.profilePicture}
-            className="h-12 w-12 rounded-full"
-          ></Image>
-        </Link>
-        <div className="flex flex-col">
-          <div className="flex gap-1 text-slate-300">
-            <Link href={`/@${author.username}`}>
-              <span>{`@${author.username}`}</span>
-            </Link>
-
-            <span className="font-thin">{` • ${dayjs(
-              post.createdAt,
-            ).fromNow()}`}</span>
-          </div>
-          <span className="text-xl">{post.content}</span>
-        </div>
-      </div>
-    </Link>
-  );
-};
-
 const Feed = () => {
   const { data, isLoading: postsLoading } = api.posts.getAll.useQuery();
 
