@@ -1,28 +1,24 @@
-# Create T3 App
+# Quack
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`. I built it while learning the T3 Stack from [Theo's video](https://youtu.be/YkOSUVzOAA4?si=UFYPJYO5u65zgJvM).
 
-## What's next? How do I make an app with this?
-
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Tech I used
 
 - [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
+- [Clerk](https://clerk.com/)
 - [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
+- [PlanetScale](https://planetscale.com/)
+- [Upstash](https://upstash.com/)
 
-## Learn More
+## How do I run this on my system?
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+1. Make a copy of [.env.example](https://github.com/thisisamish/quack/blob/main/.env.example) in the root of the project and call it ".env".
+2. Get the required environment variables (mentioned in the .env.example file).
+3. Run `pnpm install`.
+4. Run `pnpm run dev`.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## How do I deploy it?
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+The best place to do that is [Vercel](https://vercel.com/). Check out the official guide [here](https://create.t3.gg/en/deployment).
