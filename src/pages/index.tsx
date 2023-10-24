@@ -1,18 +1,12 @@
-import Head from "next/head";
 import Image from "next/image";
-import { useUser, SignInButton } from "@clerk/nextjs";
-
-import { type RouterOutputs, api } from "~/utils/api";
-
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
-import LoadingSpinner, { LoadingPage } from "~/components/Loading";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import Link from "next/link";
 import PageLayout from "~/components/Layout";
+import LoadingSpinner, { LoadingPage } from "~/components/Loading";
+import { PostView } from "~/components/PostView";
+import { api } from "~/utils/api";
 
-dayjs.extend(relativeTime);
+import { SignInButton, useUser } from "@clerk/nextjs";
 
 const CreatePostWizard = () => {
   const { user } = useUser();

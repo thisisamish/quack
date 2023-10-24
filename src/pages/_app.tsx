@@ -1,12 +1,13 @@
-import { type AppType } from "next/app";
-import { ClerkProvider } from "@clerk/nextjs";
+import "~/styles/globals.css";
+
+import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 // import { Theme } from "@radix-ui/themes";
-
 import { api } from "~/utils/api";
 
-import "~/styles/globals.css";
-import Head from "next/head";
+import { ClerkProvider } from "@clerk/nextjs";
+
+import type { AppType } from "next/app";
 // import "@radix-ui/themes/styles.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
