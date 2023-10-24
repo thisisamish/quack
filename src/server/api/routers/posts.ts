@@ -1,15 +1,17 @@
-import { clerkClient } from "@clerk/nextjs";
-import type { Post } from "@prisma/client";
-import { TRPCError } from "@trpc/server";
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
 import { z } from "zod";
 import {
   createTRPCRouter,
-  publicProcedure,
   privateProcedure,
+  publicProcedure,
 } from "~/server/api/trpc";
 import { filterUserForClient } from "~/server/helpers/filterUserForClient";
+
+import { clerkClient } from "@clerk/nextjs";
+import { TRPCError } from "@trpc/server";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
+
+import type { Post } from "@prisma/client";
 
 const addUserDataToPosts = async (posts: Post[]) => {
   const users = (
@@ -53,6 +55,7 @@ export const postsRouter = createTRPCRouter({
         createdAt: "desc",
       },
     });
+
     return addUserDataToPosts(posts);
   }),
 
