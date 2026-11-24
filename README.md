@@ -1,3 +1,5 @@
+# ARCHIVED
+
 # Quack
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`. I built it while learning the T3 Stack from [Theo's video](https://youtu.be/YkOSUVzOAA4?si=UFYPJYO5u65zgJvM).
